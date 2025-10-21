@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HealthMapp</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Welcome to HealthMapp</h1>
+    <p>Let’s find care that fits you.</p>
+  </header>
+
+  <main>
+    <section class="options">
+      <button onclick="startSearch('affordable')">Find Affordable Care</button>
+      <button onclick="startSearch('mental')">Search for Mental Health Support</button>
+      <button onclick="startSearch('prescriptions')">Get Prescription Discounts</button>
+    </section>
+
+    <section id="search-section" class="hidden">
+      <input type="text" id="userQuery" placeholder="Type your question..."/>
+      <button onclick="submitQuery()">Search</button>
+      <div id="results"></div>
+    </section>
+
+    <section id="resources" class="hidden">
+      <h2>Helpful Resources</h2>
+      <ul>
+        <li>Prescription Help</li>
+        <li>Free Therapy Programs</li>
+        <li>Community Health Events</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="hidden">
+      <h2>Need help?</h2>
+      <p>Call us at <strong>1-800-123-4567</strong> or <a href="#">send a message</a>.</p>
+    </section>
+
+    <section id="summary" class="hidden">
+      <h2>We found options for you!</h2>
+      <p>Save or print these results to take the next step.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HealthMapp</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
