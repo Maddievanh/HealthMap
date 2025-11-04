@@ -1,1 +1,72 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HealthMapp</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <h1>HealthMapp</h1>
+    <p>Connecting you to affordable healthcare, mental health resources, and prescription aid.</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('search')">Search</a>
+    <a href="#" onclick="showSection('resources')">Resources</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Find Care That Fits You</h2>
+      <p>Use our AI-powered tool to discover clinics and health resources near you.</p>
+      <button onclick="showSection('search')">Start Searching</button>
+    </section>
+
+    <section id="search" class="hidden">
+      <h2>Search for Care</h2>
+      <input type="text" id="userQuery" placeholder="Enter a city or ask a question..." />
+      <button onclick="submitQuery()">Search</button>
+      <div id="results"></div>
+
+      <h3>Map Locator</h3>
+      <div id="map">Map loading...</div>
+    </section>
+
+    <section id="resources" class="hidden">
+      <h2>Helpful Resources</h2>
+      <ul>
+        <li><strong>Prescription Aid Network</strong> — Save on medications</li>
+        <li><strong>Community Mental Health Programs</strong> — Free and low-cost therapy</li>
+        <li><strong>Local Health Events</strong> — Find screenings and checkups near you</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="hidden">
+      <h2>Need Help?</h2>
+      <p>Call us at <strong>1-800-555-HEAL (4325)</strong></p>
+      <p>Or chat with us using the box in the bottom right corner.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HealthMapp. All rights reserved.</p>
+  </footer>
+
+  <div id="chat-box">
+    <div id="chat-header">Chat with HealthMapp</div>
+    <div id="chat-messages"></div>
+    <div id="chat-input">
+      <input type="text" id="chatText" placeholder="Ask a question..." />
+      <button onclick="sendChat()">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
